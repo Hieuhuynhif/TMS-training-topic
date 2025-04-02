@@ -13,12 +13,15 @@ public class FailFast {
         // Get the iterator from the list
 
         // Modifying the list while iterating (this will throw ConcurrentModificationException)
-        for (String language : list) {
-            System.out.println(language);
-            // Modifying the list while iterating
-            list.add("JavaScript");  // This will cause a ConcurrentModificationException
+        try {
+            for (String language : list) {
+                System.out.println(language);
+                // Modifying the list while iterating
+                list.add("JavaScript");  // This will cause a ConcurrentModificationException
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
     }
 
 }
