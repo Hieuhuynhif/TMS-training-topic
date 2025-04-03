@@ -13,7 +13,11 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 
-    testImplementation 'com.h2database:h2:2.3.232'
+    implementation 'com.h2database:h2:2.3.232'
+
+    implementation 'com.zaxxer:HikariCP:6.3.0'
+
+    implementation 'ch.qos.logback:logback-classic:1.5.18'
 }
 
 test {
